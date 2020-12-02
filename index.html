@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>music-player</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- nav bar-->
+    <nav id="nav">
+      <a href="">Portfolio</a>
+      <a id="githubLink" href="https://github.com/Drrecommended/media-player"
+        >Github</a
+      >
+    </nav>
+    <div class="player-container">
+      <div class="img-container">
+        <img src="" alt="album-art" />
+      </div>
+      <div id="song-info-container">
+        <h2 id="title"></h2>
+        <h3 id="artist"></h3>
+        <div id="volumeButtonBox">
+          <input type="range" id="vol-control" min="0" max="100" step="1" />
+        </div>
+        <i class="fas fa-volume-mute" id="mute" title="mute"></i>
+        <!-- progress bar -->
+        <div id="progress-container">
+          <div id="progress"></div>
+          <div class="duration-wrapper">
+            <span id="current-time">0:00</span>
+            <span id="duration">7:06</span>
+          </div>
+        </div>
+
+        <audio
+          id="myAudio"
+          src="music/Fantastic Man - Won't Somebody Think of the Children.mp3"
+        ></audio>
+      </div>
+      <!-- controls -->
+      <div class="player-controls">
+        <div class="button-wrapper" id="prev">
+          <i class="fas fa-backward" title="previous"></i>
+        </div>
+        <div class="button-wrapper" id="play" title="play-pause">
+          <i class="fas fa-play"></i>
+          <i class="fas fa-pause"></i>
+        </div>
+        <div class="button-wrapper" id="next">
+          <i class="fas fa-forward" title="next"></i>
+        </div>
+      </div>
+    </div>
+
+    <script src="media.js"></script>
+  </body>
+</html>
